@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Yer Ride</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    <form action="/addcar" method="post">
+      <label for="car-model">What model is the car?</label>
+      <input id="car-model" name="model" type="text">
+      <label for="car-year">What year is it?</label>
+      <input id="car-year" name="year" type="text">
+      <label for="car-mileage">How many miles are on it?</label>
+      <input id="car-mileage" name="miles" type="text">
+      <label for="car-price">What's our price on it?</label>
+      <input id="car-price" name="price" type="text">
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

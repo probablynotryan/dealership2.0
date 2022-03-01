@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Our Rides</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+  @using CarF.Models;
+  <p>Welcome to Bonky Bonker's Car Dealership where the deals are so ship it's bonkers.</p>
+  <h1>Our Cars</h1>
+  <ul>
+
+    @foreach (Car car in Model)
+    {
+      <li>@car.Year @car.Model // @car.Miles miles. $@car.Price</li>
+    }
+  </ul>
+  <hr>
+  <a href="/addcar"> Add another car </a>
+  </body>
+</html>
