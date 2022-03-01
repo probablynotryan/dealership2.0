@@ -6,8 +6,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Welcome to Bonky Bonkers! </h1>
-    <a href='/addcar'>Add a new car</a>
-    <a href='/list'>See list of cars</a>
+  @using CarF.Models;
+  <p>Welcome to Bonky Bonker's Car Dealership where the deals are so ship it's bonkers.</p>
+  <h1>Our Cars</h1>
+  <ul>
+
+    @foreach (Car car in Model)
+    {
+      <li>@car.Year @car.Model // @car.Miles miles. $@car.Price</li>
+    }
+  </ul>
+  <hr>
+  <a href="/addcar"> Add another car </a>
   </body>
 </html>

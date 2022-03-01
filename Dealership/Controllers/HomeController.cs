@@ -9,21 +9,8 @@ namespace Dealership.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      List<Car> allCars = Car.GetAll();
-      return View(allCars);
-    }
-
-    [HttpGet("/addcar")]
-    public ActionResult AddCar()
-    {
+      // List<Car> allCars = Car.GetAll();
       return View();
-    }
-
-    [HttpPost("/addcar")]
-    public ActionResult Create(string model, string year, string miles, string price)
-    {
-      Car myCar = new Car(model, year, miles, price);
-      return RedirectToAction("Index");
     }
   }
 }
